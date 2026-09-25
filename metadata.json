@@ -1,0 +1,6 @@
+{
+  "name": "EduQuiz Pro - Ôn Tập Công Nghệ 10",
+  "description": "Ứng dụng tạo câu hỏi ôn tập thông minh môn Công nghệ 10 theo từng bài học, số lượng câu hỏi tùy chỉnh với 3 cấp độ nhận thức (Nhận biết, Thông hiểu, Vận dụng và Tổng hợp).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
