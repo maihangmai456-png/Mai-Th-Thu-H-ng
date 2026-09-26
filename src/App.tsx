@@ -166,7 +166,7 @@ export default function App() {
   const isTakingQuiz = currentQuestions !== null && examResult === null;
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 flex flex-col font-sans">
+    <div className="min-h-screen bg-gradient-to-br from-amber-100/80 via-sky-100/80 to-indigo-100 text-slate-900 flex flex-col font-sans selection:bg-amber-300 selection:text-slate-950">
       {/* Header */}
       <Header
         activeTab={activeTab}
@@ -181,19 +181,19 @@ export default function App() {
         isTakingQuiz={isTakingQuiz}
       />
 
-      {/* Main Container */}
-      <main className="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 py-4">
+      {/* Main Container with vibrant non-white warm colorful ambient background */}
+      <main className="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 py-6">
         
         {/* Error notification banner if any */}
         {errorMessage && (
-          <div className="mb-4 p-4 rounded-xl bg-amber-50 border border-amber-200 text-amber-800 text-xs sm:text-sm flex items-start gap-3 animate-fadeIn">
-            <AlertCircle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
+          <div className="mb-6 p-4 sm:p-5 rounded-2xl bg-amber-100 border-2 border-amber-400 text-amber-950 text-sm sm:text-base flex items-start gap-3.5 shadow-md animate-fadeIn">
+            <AlertCircle className="w-6 h-6 text-amber-700 shrink-0 mt-0.5" />
             <div className="flex-1">
-              <span className="font-semibold">{errorMessage}</span>
+              <span className="font-bold">{errorMessage}</span>
             </div>
             <button
               onClick={() => setErrorMessage(null)}
-              className="text-amber-600 hover:text-amber-800 font-bold text-xs"
+              className="text-amber-800 hover:text-amber-950 font-black text-base px-2 py-0.5 rounded-lg hover:bg-amber-200"
             >
               ✕
             </button>
@@ -270,19 +270,19 @@ export default function App() {
         />
       )}
 
-      {/* Footer */}
-      <footer className="mt-auto py-6 border-t border-slate-200/80 bg-white text-center text-xs text-slate-500">
-        <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-3">
-            <span className="font-bold text-slate-800">
+      {/* Vibrant Footer with High-Contrast Colors */}
+      <footer className="mt-auto py-6 border-t-2 border-indigo-300/40 bg-gradient-to-r from-blue-900 via-indigo-900 to-sky-900 text-white shadow-inner">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+          <div className="flex flex-col sm:flex-row items-center gap-1.5 sm:gap-3">
+            <span className="font-black text-sm sm:text-base text-amber-300 tracking-wide uppercase">
               GIA SƯ ôn tập công nghệ 10 bài 3,4
             </span>
-            <span className="hidden sm:inline">•</span>
-            <span className="font-semibold text-blue-700">
+            <span className="hidden sm:inline text-white/50">•</span>
+            <span className="font-bold text-sm sm:text-base text-sky-200">
               Tác giả: GV: Mai Thị Thuý Hằng
             </span>
           </div>
-          <span className="text-slate-400">
+          <span className="text-xs sm:text-sm font-medium text-white/80">
             SGK Kết nối tri thức với cuộc sống • 3 cấp độ nhận thức & Đề tổng hợp
           </span>
         </div>
